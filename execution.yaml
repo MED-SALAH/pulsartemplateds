@@ -1,0 +1,36 @@
+---
+
+parameters:
+  job:
+    input_file: hdfs:///BIGAPPS/DS/Indus/Data/input/operation_bancaire.csv
+    partitions_nb: 3
+    output_file: output/demo
+    scoring_class_name: demo.processing.process.Process_demo
+    partition_columns:
+    header: True
+    inferSchema: TRUE
+    api_port: 8800
+
+  spark:
+    spark_home: /usr/hdp/current/spark2-client
+    hdp_version: 3.0.1.0-187
+    SPARK_MAJOR_VERSION: 2
+    master: yarn
+    deploy_mode: cluster
+    num_executors: 3
+    executor_memory: 4G
+    driver_memory: 4G
+    executor_cores: 4
+    name_job: spark_scoring
+    queue: default
+    PYSPARK_PYTHON: ./environment.tar.gz/bin/python
+    spark.yarn.maxAppAttempts: 1
+    archives: environment.tar.gz
+    extra_args:
+        - spark.yarn.appMasterEnv.PATH: ./environment.tar.gz/bin:$PATH
+        - spark.yarn.executorEnv.PATH: ./environment.tar.gz/bin:$PATH
+        - spark.yarn.executorEnv.PYSPARK_PYTHON: ./environment.tar.gz/bin/python
+        - spark.executorEnv.PATH: ./environment.tar.gz/bin:$PATH
+        - spark.executorEnv.PYSPARK_PYTHON: ./environment.tar.gz/bin/python
+        - spark.hadoop.yarn.resourcemanager.hostname: ip-172-31-36-123.eu-west-3.compute.internal
+        - spark.hadoop.yarn.resourcemanager.address: ip-172-31-36-123.eu-west-3.compute.internal:8050
