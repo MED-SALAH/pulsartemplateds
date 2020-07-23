@@ -2,10 +2,10 @@ import datetime
 
 from dsflow.inference.processing.abstracts import Scoringfactory
 
-from pulsartemplateds.train.outil import typecolumns
+from {{cookiecutter.project_name}}.train.outil import typecolumns
 
 
-class Process_pulsar_template_ds(Scoringfactory):
+class Process_{{cookiecutter.project_name}}(Scoringfactory):
 
     @classmethod
     def score(self, loaded_model, df_to_score, extra_args=None):
@@ -47,7 +47,7 @@ class Process_pulsar_template_ds(Scoringfactory):
 
     @classmethod
     def get_score_name(cls):
-        return "pulsartemplateds"
+        return "{{cookiecutter.project_name}}"
 
     @classmethod
     def get_example(self):

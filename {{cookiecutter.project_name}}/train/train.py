@@ -7,7 +7,7 @@ import os
 import sys
 
 sys.path.append(os.path.abspath(os.curdir))
-from pulsartemplateds.train.outil import *
+from {{cookiecutter.project_name}}.train.outil import *
 
 def train():
     file_csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../data/operation_bancaire.csv')
@@ -84,5 +84,5 @@ def train():
 
 if __name__ == '__main__':
     os.path.abspath(os.curdir)
-    dsflow.train(name_experiment='pulsar_template_ds', train_method=train)
+    dsflow.train(name_experiment='{{cookiecutter.project_name}}', train_method=train)
 

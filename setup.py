@@ -13,7 +13,7 @@ from setuptools import find_packages,setup
 
 
 setup(
-    name="pulsar_template_ds",
+    name="{{cookiecutter.project_name}}",
     version="0.1",
     packages=find_packages(),
     description="lib for DS",
