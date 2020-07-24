@@ -47,7 +47,7 @@ class Process_{{cookiecutter.project_name}}(Scoringfactory):
 
     @classmethod
     def get_score_name(cls):
-        return "{{cookiecutter.project_name}}"
+        return "{{cookiecutter.project_name}}}"
 
     @classmethod
     def get_example(self):

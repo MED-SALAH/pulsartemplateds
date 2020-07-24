@@ -84,5 +84,5 @@ def train():
 
 if __name__ == '__main__':
     os.path.abspath(os.curdir)
-    dsflow.train(name_experiment='{{cookiecutter.project_name}}', train_method=train)
+    dsflow.train(name_experiment='{{cookiecutter.project_name}}}', train_method=train)
 
