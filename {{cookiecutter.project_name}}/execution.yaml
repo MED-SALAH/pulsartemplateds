@@ -5,7 +5,7 @@ parameters:
     input_file: hdfs:///BIGAPPS/DS/Indus/Data/input/operation_bancaire.csv
     partitions_nb: 3
     output_file: output/{{cookiecutter.project_name}}
-    scoring_class_name: demo.processing.process.Process_{{cookiecutter.project_name}}
+    scoring_class_name: {{cookiecutter.project_name}}.processing.process.Process_{{cookiecutter.project_name}}
     partition_columns:
     header: True
     inferSchema: TRUE
