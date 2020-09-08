@@ -2,7 +2,7 @@ import datetime
 
 from dsflow.inference.processing.abstracts import Scoringfactory
 
-from {{cookiecutter.project_name}}.train.outil import typecolumns
+from {{cookiecutter.project_name}}.train.outils import typecolumns
 
 
 class Process_{{cookiecutter.project_name}}(Scoringfactory):
