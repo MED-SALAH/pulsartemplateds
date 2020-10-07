@@ -1,14 +1,3 @@
-# import subprocess
-#
-# # def add_dsflow_env():
-# #     shell_command = " source ~/.bash_profile &&  rm -rf ./envs/ &&  mkdir ./envs/ && conda env update -f ./conda.yaml -p ./env"
-# #     print('Command ', shell_command)
-# #     p2 = subprocess.Popen(shell_command, stdout=subprocess.PIPE, shell=True)
-# #     p_status = p2.wait()
-# #     return p_status
-# #
-# # add_dsflow_env()
-
 from setuptools import find_packages,setup
 
 

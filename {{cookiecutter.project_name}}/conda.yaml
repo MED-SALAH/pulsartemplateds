@@ -1,4 +1,4 @@
-name: pulsar_template_ds
+name: {{cookiecutter.project_name}}
 channels:
   - defaults
 dependencies:
@@ -9,3 +9,4 @@ dependencies:
       - spacy
       - boto3
       - pandas
+      - matplotlib
