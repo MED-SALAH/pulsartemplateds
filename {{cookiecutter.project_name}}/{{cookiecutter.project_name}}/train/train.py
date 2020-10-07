@@ -2,6 +2,8 @@ import dsflow as pulsar
 from sklearn.metrics import f1_score, accuracy_score, roc_curve, auc
 from sklearn.model_selection import train_test_split
 import pandas as pd
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 import os
@@ -114,6 +116,7 @@ def train():
     fig.savefig("roc-paths.png")
     # Close plot
     plt.close(fig)
+
     pulsar.log_artifact("roc-paths.png")
 
 if __name__ == '__main__':
