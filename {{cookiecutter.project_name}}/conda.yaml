@@ -5,8 +5,7 @@ dependencies:
   - python=3.7.*
   - pip:
       - scikit-learn==0.20.*
-      - dsflow
+      - dsflow==2.4.2.dev0
       - spacy
       - boto3
       - pandas
-      - matplotlib
